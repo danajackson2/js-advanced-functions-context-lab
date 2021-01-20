@@ -9,6 +9,21 @@
  for you to use if you need it!
  */
 
+function createEmployeeRecord(arr){
+    return {
+        firstName : arr[0],
+        familyName : arr[1],
+        title : arr[2],
+        payPerHour : arr[3],
+        timeInEvents : [],
+        timeOutEvents : []
+    }
+}
+
+function createEmployeeRecords(array){
+    return array.map( emp => {return createEmployeeRecord(emp)})
+}
+
 let allWagesFor = function () {
     let eligibleDates = this.timeInEvents.map(function (e) {
         return e.date
